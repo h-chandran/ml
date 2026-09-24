@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Scaling Laws for Neural Language Models",
+    "authors": "Kaplan et al.",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2001.08361",
+    "tags": ["Scaling"],
+    "priority": "high",
+    "why": "Want the quantitative picture before tuning my own transformer's size and data."
+  },
+  {
+    "title": "Training Compute-Optimal Large Language Models",
+    "authors": "Hoffmann et al.",
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2203.15556",
+    "tags": ["Scaling"],
+    "priority": "high",
+    "why": "The Chinchilla correction to Kaplan's scaling laws."
+  },
+  {
+    "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+    "authors": "Yao et al.",
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2305.10601",
+    "tags": ["Reasoning", "LLMs"],
+    "priority": "medium",
+    "why": "Search over reasoning paths, a natural follow-up to chain-of-thought."
+  },
+  {
+    "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+    "authors": "Su et al.",
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2104.09864",
+    "tags": ["Transformers", "Architecture"],
+    "priority": "low",
+    "why": "Candidate positional scheme for the from-scratch transformer."
+  }
+]

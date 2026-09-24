@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Attention Is All You Need",
+    "authors": "Vaswani et al.",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1706.03762",
+    "tags": ["Transformers", "Architecture"],
+    "read": "2026-01",
+    "takeaway": "Self-attention alone, with positional encodings, replaces recurrence and parallelises training."
+  },
+  {
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "authors": "Wei et al.",
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2201.11903",
+    "tags": ["Reasoning", "LLMs"],
+    "read": "2026-02",
+    "takeaway": "Showing worked intermediate steps in few-shot examples unlocks multi-step reasoning at scale."
+  },
+  {
+    "title": "Language Models are Few-Shot Learners",
+    "authors": "Brown et al.",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2005.14165",
+    "tags": ["LLMs", "Scaling"],
+    "read": "2026-02",
+    "takeaway": "Scale gives in-context learning: the model picks up tasks from examples in the prompt without gradient updates."
+  }
+]
