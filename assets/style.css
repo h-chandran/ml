@@ -335,6 +335,19 @@ a.row:hover .name,
   border-color: hsl(var(--foreground));
 }
 
+.row-title .order {
+  display: inline-block;
+  min-width: 1.75rem;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground));
+}
+
+.numbered .row-authors,
+.numbered .row-desc {
+  padding-left: 1.75rem;
+}
+
 .row-title .plain {
   font-weight: 600;
 }
@@ -409,6 +422,10 @@ a.row:hover .name,
 }
 
 /* ---------- filters ---------- */
+
+[hidden] {
+  display: none !important;
+}
 
 .filters {
   display: flex;

@@ -16,7 +16,15 @@ notes/              longer notes on individual papers (markdown)
 
 ## Adding things
 
-Edit the JSON files in `data/`. Each entry is a plain object; see the existing entries for the fields. Optional fields can be left out.
+Edit the JSON files in `data/`. Each is an array of objects; only `title` is required.
+
+| File | Fields |
+| --- | --- |
+| `working-on.json` | `title`, `description`, `status`, `progress` (0–1), `started`, `tags`, `url` |
+| `read.json` | `title`, `authors`, `year`, `url`, `tags`, `read` (`YYYY-MM`), `takeaway`, `notes`, `code` |
+| `to-read.json` | `order`, `title`, `authors`, `year`, `url`, `tags`, `why` |
+
+When I finish a paper, I move it from `to-read.json` to `read.json` and add `read` and `takeaway`.
 
 To attach longer notes to a paper, write `notes/<slug>.md` and set `"notes": "notes/<slug>.md"` on the entry.
 

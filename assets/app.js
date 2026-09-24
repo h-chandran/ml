@@ -4,8 +4,6 @@
   var ARROW =
     '<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>';
 
-  var PRIORITY_ORDER = { high: 0, medium: 1, low: 2 };
-
   // ---------- theme ----------
 
   document.querySelector(".theme-toggle").addEventListener("click", function () {
@@ -107,12 +105,14 @@
     return items
       .map(function (item) {
         return (
-          '<li><div class="row"><span class="row-main">' +
-          '<span class="row-title">' + titleBlock(item) + "</span>" +
+          '<li><div class="row"><span class="row-main' + (item.order ? " numbered" : "") + '">' +
+          '<span class="row-title">' +
+          (item.order ? '<span class="order">' + esc(String(item.order).padStart(2, "0")) + "</span>" : "") +
+          titleBlock(item) + "</span>" +
           (item.authors ? '<span class="row-authors">' + esc(item.authors) + (item.year ? ", " + esc(item.year) : "") + "</span>" : "") +
           (item.why ? '<span class="row-desc">' + esc(item.why) + "</span>" : "") +
           "</span>" +
-          meta([item.priority ? item.priority.charAt(0).toUpperCase() + item.priority.slice(1) + " priority" : "", (item.tags || [])[0]]) +
+          meta([(item.tags || [])[0]]) +
           "</div></li>"
         );
       })
@@ -133,7 +133,6 @@
         if (tags.indexOf(t) === -1) tags.push(t);
       });
     });
-    tags.sort();
 
     tags.forEach(function (t) {
       var chip = document.createElement("button");
@@ -192,9 +191,7 @@
         return String(b.read || "").localeCompare(String(a.read || ""));
       });
       var toRead = data[2].slice().sort(function (a, b) {
-        var pa = a.priority in PRIORITY_ORDER ? PRIORITY_ORDER[a.priority] : 3;
-        var pb = b.priority in PRIORITY_ORDER ? PRIORITY_ORDER[b.priority] : 3;
-        return pa - pb;
+        return (a.order || Infinity) - (b.order || Infinity);
       });
 
       document.querySelector('[data-list="working-on"]').innerHTML = renderWorkingOn(working);
