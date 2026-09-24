@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ML Notebook | Harish Chandran</title>
+    <meta
+      name="description"
+      content="Papers Harish Chandran has read, papers on the reading list, and the machine learning work in progress."
+    />
+    <script>
+      // Set the theme before paint to avoid a flash.
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (!theme) {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        if (theme === "dark") document.documentElement.classList.add("dark");
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@400;700&family=Vend+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+      </svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+    </button>
+
+    <main>
+      <div class="grid-bg"></div>
+
+      <div class="container">
+        <header class="hero fade">
+          <h1>ML Notebook</h1>
+          <p>
+            Everything I'm reading, planning to read, and building in machine learning, kept in one place.
+            More about me at <a href="https://harishchandran.com">harishchandran.com</a>.
+          </p>
+          <nav class="jump" aria-label="Sections">
+            <a href="#working-on">Working on<span class="count" data-count="working-on"></span></a>
+            <a href="#read">Read<span class="count" data-count="read"></span></a>
+            <a href="#to-read">Reading list<span class="count" data-count="to-read"></span></a>
+          </nav>
+        </header>
+
+        <section id="working-on" class="fade" style="animation-delay: 0.1s">
+          <div class="section-head">
+            <div>
+              <h2>Currently working on</h2>
+              <p class="section-sub">Projects and topics in progress right now.</p>
+            </div>
+          </div>
+          <div class="cards" data-list="working-on"></div>
+        </section>
+
+        <section id="read" class="fade" style="animation-delay: 0.2s">
+          <div class="section-head">
+            <div>
+              <h2>Papers I've read</h2>
+              <p class="section-sub">With the one thing I took away from each.</p>
+            </div>
+          </div>
+          <div class="filters" data-filters="read">
+            <input class="search" type="search" placeholder="Search title, author, takeaway" aria-label="Search papers I've read" />
+          </div>
+          <ul class="rows" data-list="read"></ul>
+        </section>
+
+        <section id="to-read" class="fade" style="animation-delay: 0.3s">
+          <div class="section-head">
+            <div>
+              <h2>Reading list</h2>
+              <p class="section-sub">Papers queued up next, highest priority first.</p>
+            </div>
+          </div>
+          <div class="filters" data-filters="to-read">
+            <input class="search" type="search" placeholder="Search the reading list" aria-label="Search the reading list" />
+          </div>
+          <ul class="rows" data-list="to-read"></ul>
+        </section>
+
+        <footer>
+          <h2>Contact</h2>
+          <p>Have a paper I should read? Send it my way.</p>
+          <div class="links">
+            <a href="https://harishchandran.com">Website</a>
+            <a href="https://github.com/h-chandran">GitHub</a>
+            <a href="https://linkedin.com/in/harish-chandran-usa">LinkedIn</a>
+          </div>
+          <a class="btn cube" href="https://harishchandran.com" aria-label="Back to harishchandran.com">
+            <div class="bg-top"><div class="bg-inner"></div></div>
+            <div class="bg-right"><div class="bg-inner"></div></div>
+            <div class="bg"><div class="bg-inner"></div></div>
+            <div class="text">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Home
+            </div>
+          </a>
+        </footer>
+      </div>
+    </main>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
