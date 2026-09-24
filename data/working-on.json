@@ -1,19 +1,13 @@
 [
   {
-    "title": "Transformer from scratch",
-    "description": "Building a transformer with my own modifications, no framework magic. Tokenizer, attention, training loop, all hand-written.",
-    "status": "In progress",
-    "progress": 0.4,
-    "started": "2026",
-    "tags": ["Code", "Architecture"],
-    "url": ""
-  },
-  {
     "title": "LLM reasoning research",
     "description": "Research on reasoning in large language models at the Duke NLP Lab.",
     "status": "Ongoing",
     "started": "2025",
-    "tags": ["Research", "Reasoning"],
-    "url": ""
+    "tags": [
+      "Research",
+      "Reasoning"
+    ],
+    "url": "https://nlplab.cs.duke.edu/"
   }
 ]

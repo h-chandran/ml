@@ -1,38 +1,242 @@
 [
   {
-    "title": "Scaling Laws for Neural Language Models",
-    "authors": "Kaplan et al.",
-    "year": 2020,
-    "url": "https://arxiv.org/abs/2001.08361",
-    "tags": ["Scaling"],
-    "priority": "high",
-    "why": "Want the quantitative picture before tuning my own transformer's size and data."
+    "order": 1,
+    "title": "Adam: A Method for Stochastic Optimization",
+    "authors": "Kingma & Ba",
+    "year": 2014,
+    "url": "https://arxiv.org/abs/1412.6980",
+    "tags": [
+      "Foundations"
+    ]
   },
   {
+    "order": 2,
+    "title": "Decoupled Weight Decay Regularization",
+    "authors": "Loshchilov & Hutter",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1711.05101",
+    "tags": [
+      "Foundations"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Attention Is All You Need",
+    "authors": "Vaswani et al.",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1706.03762",
+    "tags": [
+      "Foundations"
+    ]
+  },
+  {
+    "order": 4,
+    "title": "Distilling the Knowledge in a Neural Network",
+    "authors": "Hinton et al.",
+    "year": 2015,
+    "url": "https://arxiv.org/abs/1503.02531",
+    "tags": [
+      "Foundations"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors": "Hu et al.",
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2106.09685",
+    "tags": [
+      "Foundations"
+    ]
+  },
+  {
+    "order": 6,
     "title": "Training Compute-Optimal Large Language Models",
     "authors": "Hoffmann et al.",
     "year": 2022,
     "url": "https://arxiv.org/abs/2203.15556",
-    "tags": ["Scaling"],
-    "priority": "high",
-    "why": "The Chinchilla correction to Kaplan's scaling laws."
+    "tags": [
+      "Foundations"
+    ]
   },
   {
-    "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
-    "authors": "Yao et al.",
+    "order": 7,
+    "title": "Three Scenarios for Continual Learning",
+    "authors": "van de Ven & Tolias",
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1904.07734",
+    "tags": [
+      "Continual learning"
+    ]
+  },
+  {
+    "order": 8,
+    "title": "Overcoming Catastrophic Forgetting in Neural Networks",
+    "authors": "Kirkpatrick et al.",
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1612.00796",
+    "tags": [
+      "Continual learning"
+    ]
+  },
+  {
+    "order": 9,
+    "title": "On Tiny Episodic Memories in Continual Learning",
+    "authors": "Chaudhry et al.",
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1902.10486",
+    "tags": [
+      "Continual learning"
+    ]
+  },
+  {
+    "order": 10,
+    "title": "Gradient Episodic Memory for Continual Learning",
+    "authors": "Lopez-Paz & Ranzato",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1706.08840",
+    "tags": [
+      "Continual learning"
+    ]
+  },
+  {
+    "order": 11,
+    "title": "Dark Experience for General Continual Learning: a Strong, Simple Baseline",
+    "authors": "Buzzega et al.",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2004.07211",
+    "tags": [
+      "Continual learning"
+    ]
+  },
+  {
+    "order": 12,
+    "title": "Continual Learning of Large Language Models: A Comprehensive Survey",
+    "authors": "Shi et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2404.16789",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 13,
+    "title": "Simple and Scalable Strategies to Continually Pre-train Large Language Models",
+    "authors": "Ibrahim et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.08763",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 14,
+    "title": "Spurious Forgetting in Continual Learning of Language Models",
+    "authors": "Zheng et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2501.13453",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 15,
+    "title": "Revisiting Replay and Gradient Alignment for Continual Pre-Training of Large Language Models",
+    "authors": "Abbes et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2508.01908",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 16,
+    "title": "Self-Distillation Enables Continual Learning",
+    "authors": "Shenfeld et al.",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2601.19897",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 17,
+    "title": "Maintaining Plasticity in Deep Continual Learning",
+    "authors": "Dohare et al.",
     "year": 2023,
-    "url": "https://arxiv.org/abs/2305.10601",
-    "tags": ["Reasoning", "LLMs"],
-    "priority": "medium",
-    "why": "Search over reasoning paths, a natural follow-up to chain-of-thought."
+    "url": "https://arxiv.org/abs/2306.13812",
+    "tags": [
+      "Plasticity"
+    ]
   },
   {
-    "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
-    "authors": "Su et al.",
-    "year": 2021,
-    "url": "https://arxiv.org/abs/2104.09864",
-    "tags": ["Transformers", "Architecture"],
-    "priority": "low",
-    "why": "Candidate positional scheme for the from-scratch transformer."
+    "order": 18,
+    "title": "Do Neural Networks Lose Plasticity in a Gradually Changing World?",
+    "authors": "Liu & Mou",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2602.09234",
+    "tags": [
+      "Plasticity"
+    ]
+  },
+  {
+    "order": 19,
+    "title": "Can Scale Save Us From Plasticity Loss in Large Language Models?",
+    "authors": "Hernandez-Garcia et al.",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2606.24752",
+    "tags": [
+      "Plasticity"
+    ]
+  },
+  {
+    "order": 20,
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "authors": "Lewis et al.",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2005.11401",
+    "tags": [
+      "Memory"
+    ]
+  },
+  {
+    "order": 21,
+    "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+    "authors": "Sun et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2407.04620",
+    "tags": [
+      "Memory"
+    ]
+  },
+  {
+    "order": 22,
+    "title": "Titans: Learning to Memorize at Test Time",
+    "authors": "Behrouz et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2501.00663",
+    "tags": [
+      "Memory"
+    ]
+  },
+  {
+    "order": 23,
+    "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+    "authors": "Behrouz et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2512.24695",
+    "tags": [
+      "Memory"
+    ]
+  },
+  {
+    "order": 24,
+    "title": "When Does Continual Learning Require Learning",
+    "authors": "Harrington et al.",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2607.07847",
+    "tags": [
+      "Continual learning"
+    ]
   }
 ]
