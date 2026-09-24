@@ -40,4 +40,4 @@ Then open http://localhost:8000.
 
 ## Deploying
 
-It's a plain static site, so GitHub Pages works as-is: Settings → Pages → deploy from `main`, root folder.
+Served by GitHub Pages from `main` (root folder) at https://ml.harishchandran.com. The `CNAME` file sets the custom domain; DNS has a `CNAME` record `ml` → `h-chandran.github.io`. `.nojekyll` makes Pages serve the files as-is.
