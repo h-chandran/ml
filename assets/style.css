@@ -314,10 +314,13 @@ a.card:hover {
 }
 
 .row-title {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.25rem 0.5rem;
+  display: block;
+}
+
+.row-title .arrow {
+  display: inline-block;
+  margin-left: 0.3rem;
+  vertical-align: -0.05em;
 }
 
 .row-title .name {
