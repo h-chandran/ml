@@ -1,0 +1,604 @@
+/* Theme mirrors harishchandran.com: paper/ink palette, dotted grid, dotted rules. */
+
+:root {
+  --ink: 60 3% 8%;
+  --paper: 50 17% 93%;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --muted: 50 12% 87%;
+  --muted-foreground: 60 3% 36%;
+  --card: 50 17% 96%;
+  --border: 50 8% 74%;
+  --primary: var(--ink);
+  --grid-dot: hsl(var(--foreground) / 0.18);
+
+  --font-display: "Stack Sans Notch", system-ui, -apple-system, sans-serif;
+  --font-body: "Vend Sans", system-ui, -apple-system, sans-serif;
+
+  color-scheme: light;
+}
+
+:root.dark {
+  --background: var(--ink);
+  --foreground: var(--paper);
+  --muted: 60 3% 14%;
+  --muted-foreground: 50 10% 66%;
+  --card: 60 3% 11%;
+  --border: 60 3% 24%;
+  --primary: var(--paper);
+  --grid-dot: hsl(var(--foreground) / 0.16);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+  overflow-x: clip;
+}
+
+.grid-bg {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-dot) 1px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.2;
+}
+
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* ---------- theme toggle ---------- */
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px dotted hsl(var(--muted-foreground));
+  background: hsl(var(--background) / 0.8);
+  color: hsl(var(--muted-foreground));
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.theme-toggle:hover {
+  border-color: hsl(var(--foreground));
+  color: hsl(var(--foreground));
+}
+
+.theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+:root.dark .theme-toggle .icon-sun {
+  display: block;
+}
+
+:root.dark .theme-toggle .icon-moon {
+  display: none;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding-top: 8rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 5.12rem);
+  line-height: 0.95;
+}
+
+.hero p {
+  margin: 1.5rem 0 0;
+  max-width: 36rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.hero p a {
+  color: hsl(var(--foreground));
+  border-bottom: 1px dotted hsl(var(--muted-foreground));
+}
+
+.hero p a:hover {
+  border-color: hsl(var(--foreground));
+}
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+}
+
+.jump a {
+  color: hsl(var(--muted-foreground));
+  border-bottom: 1px dotted hsl(var(--muted-foreground));
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.jump a:hover {
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--foreground));
+}
+
+.jump .count {
+  margin-left: 0.35rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- sections ---------- */
+
+section {
+  padding-top: 6rem;
+  scroll-margin-top: 1rem;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-sub {
+  margin: 0.4rem 0 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ---------- working-on cards ---------- */
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.6);
+  padding: 1.25rem;
+  transition: border-color 0.15s, transform 0.2s;
+}
+
+a.card:hover {
+  border-color: hsl(var(--foreground));
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.card p {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: hsl(var(--muted-foreground));
+}
+
+.card .meta {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.progress {
+  margin-top: 1rem;
+  height: 6px;
+  border: 1px dotted hsl(var(--muted-foreground));
+  position: relative;
+}
+
+.progress span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: hsl(var(--foreground));
+}
+
+.status {
+  display: inline-block;
+  font-size: 0.6875rem;
+  line-height: 1;
+  padding: 0.25rem 0.4rem;
+  border: 1px dotted hsl(var(--muted-foreground));
+  color: hsl(var(--muted-foreground));
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* ---------- list rows ---------- */
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px dotted hsl(var(--border));
+}
+
+.rows li {
+  border-bottom: 1px dotted hsl(var(--border));
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.row-main {
+  min-width: 0;
+}
+
+.row-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+}
+
+.row-title .name {
+  font-weight: 600;
+  border-bottom: 1px dotted hsl(var(--muted-foreground));
+  padding-bottom: 2px;
+  transition: border-color 0.15s;
+}
+
+a.row:hover .name,
+.row-title a.name:hover {
+  border-color: hsl(var(--foreground));
+}
+
+.row-title .plain {
+  font-weight: 600;
+}
+
+.arrow {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+  color: hsl(var(--muted-foreground));
+}
+
+.row-desc {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: hsl(var(--muted-foreground));
+}
+
+.row-authors {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.row-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.row-links a {
+  color: hsl(var(--muted-foreground));
+  border-bottom: 1px dotted hsl(var(--muted-foreground));
+}
+
+.row-links a:hover {
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--foreground));
+}
+
+.meta {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding-top: 0.25rem;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.meta .dot {
+  margin: 0 0.5rem;
+}
+
+.empty {
+  padding: 1.5rem 0;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+@media (max-width: 560px) {
+  .row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .row .meta {
+    padding-top: 0;
+    white-space: normal;
+  }
+}
+
+/* ---------- filters ---------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.search {
+  flex: 1 1 14rem;
+  min-width: 0;
+  font: inherit;
+  font-size: 0.875rem;
+  padding: 0.45rem 0.6rem;
+  background: hsl(var(--background) / 0.6);
+  color: hsl(var(--foreground));
+  border: 1px dotted hsl(var(--muted-foreground));
+  outline: none;
+}
+
+.search:focus {
+  border-style: solid;
+  border-color: hsl(var(--foreground));
+}
+
+.search::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.chip {
+  font: inherit;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.55rem;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  border: 1px dotted hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.chip:hover {
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--foreground));
+}
+
+.chip[aria-pressed="true"] {
+  background: hsl(var(--foreground));
+  border: 1px solid hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+/* ---------- cube button (from the reference site) ---------- */
+
+.btn {
+  display: inline-block;
+  color: hsl(var(--foreground));
+  letter-spacing: 0.1em;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 700;
+  background: none;
+  border: 0;
+  padding: 0.7em 1em;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.cube {
+  position: relative;
+  transition: all 0.5s;
+}
+
+.cube .bg-top {
+  position: absolute;
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  height: 10px;
+  background: hsl(var(--primary));
+  transform: skew(-45deg);
+  transition: all 0.4s;
+}
+
+.cube .bg-top .bg-inner {
+  bottom: 0;
+}
+
+.cube .bg {
+  position: absolute;
+  inset: 0;
+  background: hsl(var(--primary));
+  transition: all 0.4s;
+}
+
+.cube .bg-right {
+  position: absolute;
+  z-index: 0;
+  top: -5px;
+  bottom: 5px;
+  left: 100%;
+  width: 10px;
+  background: hsl(var(--primary));
+  transform: skewY(-45deg);
+  transition: all 0.4s;
+}
+
+.cube .bg-right .bg-inner {
+  left: 0;
+}
+
+.cube .bg-inner {
+  position: absolute;
+  inset: 2px;
+  background: hsl(var(--background));
+}
+
+.cube .text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.4s;
+}
+
+.cube .text svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.cube:hover .bg-inner {
+  background: hsl(var(--primary));
+  transition: all 0.4s;
+}
+
+.cube:hover .text {
+  color: hsl(var(--background));
+}
+
+/* ---------- footer ---------- */
+
+footer {
+  padding: 6rem 0 5rem;
+}
+
+footer p {
+  margin: 1.5rem 0 0;
+  max-width: 36rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.links a {
+  border-bottom: 1px dotted hsl(var(--muted-foreground));
+  padding-bottom: 2px;
+}
+
+.links a:hover {
+  border-color: hsl(var(--foreground));
+}
+
+/* ---------- entrance ---------- */
+
+.fade {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fade-in 0.6s ease forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
