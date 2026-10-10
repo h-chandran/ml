@@ -81,20 +81,20 @@
   },
   {
     "order": 9,
-    "title": "On Tiny Episodic Memories in Continual Learning",
-    "authors": "Chaudhry et al.",
-    "year": 2019,
-    "url": "https://arxiv.org/abs/1902.10486",
+    "title": "Gradient Episodic Memory for Continual Learning",
+    "authors": "Lopez-Paz & Ranzato",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1706.08840",
     "tags": [
       "Continual learning"
     ]
   },
   {
     "order": 10,
-    "title": "Gradient Episodic Memory for Continual Learning",
-    "authors": "Lopez-Paz & Ranzato",
-    "year": 2017,
-    "url": "https://arxiv.org/abs/1706.08840",
+    "title": "On Tiny Episodic Memories in Continual Learning",
+    "authors": "Chaudhry et al.",
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1902.10486",
     "tags": [
       "Continual learning"
     ]
@@ -111,56 +111,6 @@
   },
   {
     "order": 12,
-    "title": "Continual Learning of Large Language Models: A Comprehensive Survey",
-    "authors": "Shi et al.",
-    "year": 2024,
-    "url": "https://arxiv.org/abs/2404.16789",
-    "tags": [
-      "Continual LLMs"
-    ]
-  },
-  {
-    "order": 13,
-    "title": "Simple and Scalable Strategies to Continually Pre-train Large Language Models",
-    "authors": "Ibrahim et al.",
-    "year": 2024,
-    "url": "https://arxiv.org/abs/2403.08763",
-    "tags": [
-      "Continual LLMs"
-    ]
-  },
-  {
-    "order": 14,
-    "title": "Spurious Forgetting in Continual Learning of Language Models",
-    "authors": "Zheng et al.",
-    "year": 2025,
-    "url": "https://arxiv.org/abs/2501.13453",
-    "tags": [
-      "Continual LLMs"
-    ]
-  },
-  {
-    "order": 15,
-    "title": "Revisiting Replay and Gradient Alignment for Continual Pre-Training of Large Language Models",
-    "authors": "Abbes et al.",
-    "year": 2025,
-    "url": "https://arxiv.org/abs/2508.01908",
-    "tags": [
-      "Continual LLMs"
-    ]
-  },
-  {
-    "order": 16,
-    "title": "Self-Distillation Enables Continual Learning",
-    "authors": "Shenfeld et al.",
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2601.19897",
-    "tags": [
-      "Continual LLMs"
-    ]
-  },
-  {
-    "order": 17,
     "title": "Maintaining Plasticity in Deep Continual Learning",
     "authors": "Dohare et al.",
     "year": 2023,
@@ -170,7 +120,7 @@
     ]
   },
   {
-    "order": 18,
+    "order": 13,
     "title": "Do Neural Networks Lose Plasticity in a Gradually Changing World?",
     "authors": "Liu & Mou",
     "year": 2026,
@@ -180,13 +130,63 @@
     ]
   },
   {
-    "order": 19,
+    "order": 14,
     "title": "Can Scale Save Us From Plasticity Loss in Large Language Models?",
     "authors": "Hernandez-Garcia et al.",
     "year": 2026,
     "url": "https://arxiv.org/abs/2606.24752",
     "tags": [
       "Plasticity"
+    ]
+  },
+  {
+    "order": 15,
+    "title": "Continual Learning of Large Language Models: A Comprehensive Survey",
+    "authors": "Shi et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2404.16789",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 16,
+    "title": "Simple and Scalable Strategies to Continually Pre-train Large Language Models",
+    "authors": "Ibrahim et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.08763",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 17,
+    "title": "Spurious Forgetting in Continual Learning of Language Models",
+    "authors": "Zheng et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2501.13453",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 18,
+    "title": "Revisiting Replay and Gradient Alignment for Continual Pre-Training of Large Language Models",
+    "authors": "Abbes et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2508.01908",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 19,
+    "title": "Self-Distillation Enables Continual Learning",
+    "authors": "Shenfeld et al.",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2601.19897",
+    "tags": [
+      "Continual LLMs"
     ]
   },
   {
