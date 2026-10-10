@@ -141,6 +141,46 @@
   },
   {
     "order": 15,
+    "title": "Language Models as Knowledge Bases?",
+    "authors": "Petroni et al.",
+    "year": 2019,
+    "url": "https://arxiv.org/abs/1909.01066",
+    "tags": [
+      "Knowledge"
+    ]
+  },
+  {
+    "order": 16,
+    "title": "Transformer Feed-Forward Layers Are Key-Value Memories",
+    "authors": "Geva et al.",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2012.14913",
+    "tags": [
+      "Knowledge"
+    ]
+  },
+  {
+    "order": 17,
+    "title": "Locating and Editing Factual Associations in GPT",
+    "authors": "Meng et al.",
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2202.05262",
+    "tags": [
+      "Knowledge"
+    ]
+  },
+  {
+    "order": 18,
+    "title": "Physics of Language Models: Part 3.1, Knowledge Storage and Extraction",
+    "authors": "Allen-Zhu & Li",
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2309.14316",
+    "tags": [
+      "Knowledge"
+    ]
+  },
+  {
+    "order": 19,
     "title": "Continual Learning of Large Language Models: A Comprehensive Survey",
     "authors": "Shi et al.",
     "year": 2024,
@@ -150,7 +190,17 @@
     ]
   },
   {
-    "order": 16,
+    "order": 20,
+    "title": "Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs",
+    "authors": "Ovadia et al.",
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2312.05934",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 21,
     "title": "Simple and Scalable Strategies to Continually Pre-train Large Language Models",
     "authors": "Ibrahim et al.",
     "year": 2024,
@@ -160,7 +210,17 @@
     ]
   },
   {
-    "order": 17,
+    "order": 22,
+    "title": "Synthetic Continued Pretraining",
+    "authors": "Yang et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2409.07431",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 23,
     "title": "Spurious Forgetting in Continual Learning of Language Models",
     "authors": "Zheng et al.",
     "year": 2025,
@@ -170,7 +230,7 @@
     ]
   },
   {
-    "order": 18,
+    "order": 24,
     "title": "Revisiting Replay and Gradient Alignment for Continual Pre-Training of Large Language Models",
     "authors": "Abbes et al.",
     "year": 2025,
@@ -180,7 +240,17 @@
     ]
   },
   {
-    "order": 19,
+    "order": 25,
+    "title": "Continual Learning via Sparse Memory Finetuning",
+    "authors": "Lin et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2510.15103",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 26,
     "title": "Self-Distillation Enables Continual Learning",
     "authors": "Shenfeld et al.",
     "year": 2026,
@@ -190,7 +260,17 @@
     ]
   },
   {
-    "order": 20,
+    "order": 27,
+    "title": "Can a Language Model Learn Facts Continually in Its Weights?",
+    "authors": "O'Neill et al.",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2607.11020",
+    "tags": [
+      "Continual LLMs"
+    ]
+  },
+  {
+    "order": 28,
     "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
     "authors": "Lewis et al.",
     "year": 2020,
@@ -200,7 +280,77 @@
     ]
   },
   {
-    "order": 21,
+    "order": 29,
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "authors": "Liu et al.",
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2307.03172",
+    "tags": [
+      "Context"
+    ]
+  },
+  {
+    "order": 30,
+    "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+    "authors": "Edge et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2404.16130",
+    "tags": [
+      "Knowledge graphs"
+    ]
+  },
+  {
+    "order": 31,
+    "title": "From RAG to Memory: Non-Parametric Continual Learning for Large Language Models",
+    "authors": "Gutiérrez et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2502.14802",
+    "tags": [
+      "Knowledge graphs"
+    ]
+  },
+  {
+    "order": 32,
+    "title": "MemGPT: Towards LLMs as Operating Systems",
+    "authors": "Packer et al.",
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2310.08560",
+    "tags": [
+      "Context"
+    ]
+  },
+  {
+    "order": 33,
+    "title": "Cartridges: Lightweight and General-Purpose Long Context Representations via Self-Study",
+    "authors": "Eyuboglu et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2506.06266",
+    "tags": [
+      "Context"
+    ]
+  },
+  {
+    "order": 34,
+    "title": "Effective Context Engineering for AI Agents",
+    "authors": "Rajasekaran et al. (Anthropic)",
+    "year": 2025,
+    "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "tags": [
+      "Context"
+    ]
+  },
+  {
+    "order": 35,
+    "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+    "authors": "Zhang et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2510.04618",
+    "tags": [
+      "Context"
+    ]
+  },
+  {
+    "order": 36,
     "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
     "authors": "Sun et al.",
     "year": 2024,
@@ -210,7 +360,7 @@
     ]
   },
   {
-    "order": 22,
+    "order": 37,
     "title": "Titans: Learning to Memorize at Test Time",
     "authors": "Behrouz et al.",
     "year": 2024,
@@ -220,7 +370,7 @@
     ]
   },
   {
-    "order": 23,
+    "order": 38,
     "title": "Nested Learning: The Illusion of Deep Learning Architectures",
     "authors": "Behrouz et al.",
     "year": 2025,
@@ -230,7 +380,7 @@
     ]
   },
   {
-    "order": 24,
+    "order": 39,
     "title": "When Does Continual Learning Require Learning",
     "authors": "Harrington et al.",
     "year": 2026,
