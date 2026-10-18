@@ -622,3 +622,389 @@ footer p {
     scroll-behavior: auto;
   }
 }
+
+/* ---------- knowledge base ---------- */
+
+:root {
+  --g0: 12 62% 46%;
+  --g1: 200 48% 38%;
+  --g2: 152 40% 32%;
+  --g3: 268 32% 48%;
+  --g4: 38 70% 40%;
+  --g5: 60 3% 45%;
+}
+
+:root.dark {
+  --g0: 12 70% 64%;
+  --g1: 200 55% 64%;
+  --g2: 152 42% 56%;
+  --g3: 268 45% 72%;
+  --g4: 38 70% 60%;
+  --g5: 50 8% 62%;
+}
+
+.g0 { --g: var(--g0); }
+.g1 { --g: var(--g1); }
+.g2 { --g: var(--g2); }
+.g3 { --g: var(--g3); }
+.g4 { --g: var(--g4); }
+.g5 { --g: var(--g5); }
+
+.swatch {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  background: hsl(var(--g, var(--muted-foreground)));
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+}
+
+.graph-wrap {
+  border: 1px dotted hsl(var(--border));
+  background: hsl(var(--card) / 0.5);
+}
+
+.graph {
+  display: block;
+  width: 100%;
+  height: 520px;
+  touch-action: none;
+  user-select: none;
+}
+
+@media (max-width: 560px) {
+  .graph {
+    height: 420px;
+  }
+}
+
+.edge {
+  stroke: hsl(var(--muted-foreground));
+  stroke-width: 1;
+  opacity: 0.45;
+  transition: opacity 0.2s;
+}
+
+.edge-source {
+  stroke-dasharray: 2 3;
+  opacity: 0.3;
+}
+
+.edge.dim {
+  opacity: 0.06;
+}
+
+.node {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.node circle {
+  fill: hsl(var(--g, var(--muted-foreground)));
+  stroke: hsl(var(--background));
+  stroke-width: 1.5;
+}
+
+.node-source circle {
+  fill: hsl(var(--background));
+  stroke: hsl(var(--g, var(--muted-foreground)));
+  stroke-width: 1.5;
+}
+
+.node text {
+  font-family: var(--font-body);
+  font-size: var(--label, 11px);
+  text-anchor: middle;
+  fill: hsl(var(--foreground));
+  paint-order: stroke;
+  stroke: hsl(var(--background));
+  stroke-width: 3px;
+  pointer-events: none;
+}
+
+.node:hover circle,
+.node:focus-visible circle,
+.node.selected circle {
+  stroke: hsl(var(--foreground));
+  stroke-width: 2.5;
+}
+
+.node:focus {
+  outline: none;
+}
+
+.node.dim {
+  opacity: 0.15;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.concept-groups {
+  display: grid;
+  gap: 1.5rem 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+}
+
+.concept-group h3 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.concept-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px dotted hsl(var(--border));
+}
+
+.concept-group li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted hsl(var(--border));
+  font-size: 0.875rem;
+}
+
+.concept-group li a:hover {
+  text-decoration: underline dotted;
+}
+
+.concept-group .count {
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground));
+}
+
+.row-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.concept-chip {
+  font-size: 0.6875rem;
+  padding: 0.2rem 0.45rem;
+  border-color: hsl(var(--g, var(--muted-foreground)));
+  color: hsl(var(--g, var(--muted-foreground)));
+}
+
+.concept-chip:hover {
+  color: hsl(var(--foreground));
+}
+
+.row-title .ext {
+  display: inline-block;
+  vertical-align: -0.05em;
+}
+
+.detail {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.7);
+}
+
+@media (min-width: 768px) {
+  .detail {
+    padding: 2rem 2.25rem;
+  }
+}
+
+.detail-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-head .status.g0,
+.detail-head .status.g1,
+.detail-head .status.g2,
+.detail-head .status.g3,
+.detail-head .status.g4,
+.detail-head .status.g5 {
+  color: hsl(var(--g));
+  border-color: hsl(var(--g));
+}
+
+.detail .close {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: hsl(var(--muted-foreground));
+}
+
+.detail .close:hover {
+  color: hsl(var(--foreground));
+}
+
+.detail-title {
+  margin: 0.9rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.detail-title a {
+  border-bottom: 1px dotted hsl(var(--muted-foreground));
+}
+
+.detail-summary {
+  margin: 0.75rem 0 0;
+  max-width: 44rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+}
+
+.detail-sub {
+  margin: 1.75rem 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ---------- rendered notes ---------- */
+
+.prose {
+  max-width: 46rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.prose h2 {
+  margin: 1.5rem 0 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.prose h3 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.prose h4 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0.6rem 0;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin: 0.3rem 0;
+}
+
+.prose a {
+  border-bottom: 1px dotted hsl(var(--muted-foreground));
+}
+
+.prose a:hover {
+  border-color: hsl(var(--foreground));
+}
+
+.prose code {
+  font-size: 0.85em;
+  padding: 0.1em 0.3em;
+  background: hsl(var(--muted));
+}
+
+.prose pre {
+  overflow-x: auto;
+  padding: 0.9rem 1rem;
+  background: hsl(var(--muted));
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.prose pre code {
+  padding: 0;
+  background: none;
+}
+
+.prose blockquote {
+  margin: 1rem 0;
+  padding: 0.25rem 1rem;
+  border-left: 2px dotted hsl(var(--muted-foreground));
+  color: hsl(var(--muted-foreground));
+}
+
+.prose hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px dotted hsl(var(--border));
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.prose th,
+.prose td {
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  border-bottom: 1px dotted hsl(var(--border));
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th {
+  font-weight: 600;
+}

@@ -49,7 +49,7 @@
   }
 
   function searchText(item) {
-    return [item.title, item.authors, item.takeaway, item.why, item.description, (item.tags || []).join(" ")]
+    return [item.title, item.authors, item.speaker, item.venue, item.takeaway, item.why, item.description, (item.tags || []).join(" ")]
       .join(" ")
       .toLowerCase();
   }
@@ -85,7 +85,7 @@
     return items
       .map(function (item) {
         var links = [];
-        if (item.notes) links.push('<a href="' + esc(item.notes) + '">My notes</a>');
+        if (item.notes) links.push('<a href="kb.html#note=' + esc(item.notes) + '">My notes</a>');
         if (item.code) links.push('<a href="' + esc(item.code) + '" target="_blank" rel="noopener noreferrer">Code</a>');
         return (
           '<li><div class="row"><span class="row-main">' +
@@ -95,6 +95,25 @@
           (links.length ? '<span class="row-links">' + links.join("") + "</span>" : "") +
           "</span>" +
           meta([item.read ? "Read " + formatMonth(item.read) : "", (item.tags || [])[0]]) +
+          "</div></li>"
+        );
+      })
+      .join("");
+  }
+
+  function renderTalks(items) {
+    return items
+      .map(function (item) {
+        var links = [];
+        if (item.notes) links.push('<a href="kb.html#note=' + esc(item.notes) + '">My notes</a>');
+        return (
+          '<li><div class="row"><span class="row-main">' +
+          '<span class="row-title">' + titleBlock(item) + "</span>" +
+          (item.speaker ? '<span class="row-authors">' + esc(item.speaker) + (item.venue ? ", " + esc(item.venue) : "") + "</span>" : "") +
+          (item.takeaway ? '<span class="row-desc">' + esc(item.takeaway) + "</span>" : "") +
+          (links.length ? '<span class="row-links">' + links.join("") + "</span>" : "") +
+          "</span>" +
+          meta([item.watched ? "Watched " + formatMonth(item.watched) : "", (item.tags || [])[0]]) +
           "</div></li>"
         );
       })
@@ -163,7 +182,7 @@
       });
       list.innerHTML = shown.length
         ? render(shown)
-        : '<li class="empty">' + (items.length ? "No papers match." : "Nothing here yet.") + "</li>";
+        : '<li class="empty">' + (items.length ? "Nothing matches." : "Nothing here yet.") + "</li>";
     }
 
     if (!items.length) filters.hidden = true;
@@ -184,7 +203,7 @@
     if (el) el.textContent = "(" + n + ")";
   }
 
-  Promise.all([load("working-on"), load("read"), load("to-read")])
+  Promise.all([load("working-on"), load("read"), load("to-read"), load("talks")])
     .then(function (data) {
       var working = data[0];
       var read = data[1].slice().sort(function (a, b) {
@@ -194,12 +213,18 @@
         return (a.order || Infinity) - (b.order || Infinity);
       });
 
+      var talks = data[3].slice().sort(function (a, b) {
+        return String(b.watched || "").localeCompare(String(a.watched || ""));
+      });
+
       document.querySelector('[data-list="working-on"]').innerHTML = renderWorkingOn(working);
       setupList("read", read, renderRead);
+      setupList("talks", talks, renderTalks);
       setupList("to-read", toRead, renderToRead);
 
       setCount("working-on", working.length);
       setCount("read", read.length);
+      setCount("talks", talks.length);
       setCount("to-read", toRead.length);
     })
     .catch(function (err) {

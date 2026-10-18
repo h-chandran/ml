@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Why Nobody Has Solved Continual Learning",
+    "speaker": "Charlie O'Neill (Baseten)",
+    "venue": "LangChain Presents: The Learning Loop",
+    "year": 2026,
+    "date": "2026-10-16",
+    "url": "https://www.youtube.com/watch?v=whnDiwcL4HE",
+    "watched": "2026-10",
+    "tags": [
+      "Continual LLMs"
+    ],
+    "concepts": [
+      "learning-loop",
+      "sft",
+      "rl",
+      "on-off-policy",
+      "distillation",
+      "self-distillation",
+      "catastrophic-forgetting",
+      "pass-at-k",
+      "continual-learning"
+    ],
+    "takeaway": "The method that adds knowledge (SFT) forgets, and the method that doesn't forget (RL) can't add knowledge. SFT to RL cycles work for narrow tasks but erode general agents, so tune the SFT:RL ratio to how narrow the task is.",
+    "notes": "notes/talks/why-nobody-has-solved-continual-learning.md"
+  }
+]

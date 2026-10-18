@@ -7,6 +7,9 @@
     "url": "https://arxiv.org/abs/1412.6980",
     "tags": [
       "Foundations"
+    ],
+    "concepts": [
+      "optimization"
     ]
   },
   {
@@ -17,6 +20,9 @@
     "url": "https://arxiv.org/abs/1711.05101",
     "tags": [
       "Foundations"
+    ],
+    "concepts": [
+      "optimization"
     ]
   },
   {
@@ -27,6 +33,9 @@
     "url": "https://arxiv.org/abs/1706.03762",
     "tags": [
       "Foundations"
+    ],
+    "concepts": [
+      "transformers"
     ]
   },
   {
@@ -37,6 +46,9 @@
     "url": "https://arxiv.org/abs/1503.02531",
     "tags": [
       "Foundations"
+    ],
+    "concepts": [
+      "distillation"
     ]
   },
   {
@@ -47,6 +59,9 @@
     "url": "https://arxiv.org/abs/2106.09685",
     "tags": [
       "Foundations"
+    ],
+    "concepts": [
+      "parameter-isolation"
     ]
   },
   {
@@ -57,6 +72,9 @@
     "url": "https://arxiv.org/abs/2203.15556",
     "tags": [
       "Foundations"
+    ],
+    "concepts": [
+      "scaling-laws"
     ]
   },
   {
@@ -67,6 +85,9 @@
     "url": "https://arxiv.org/abs/1904.07734",
     "tags": [
       "Continual learning"
+    ],
+    "concepts": [
+      "continual-learning"
     ]
   },
   {
@@ -77,6 +98,10 @@
     "url": "https://arxiv.org/abs/1612.00796",
     "tags": [
       "Continual learning"
+    ],
+    "concepts": [
+      "regularization",
+      "catastrophic-forgetting"
     ]
   },
   {
@@ -87,6 +112,9 @@
     "url": "https://arxiv.org/abs/1706.08840",
     "tags": [
       "Continual learning"
+    ],
+    "concepts": [
+      "replay"
     ]
   },
   {
@@ -97,6 +125,9 @@
     "url": "https://arxiv.org/abs/1902.10486",
     "tags": [
       "Continual learning"
+    ],
+    "concepts": [
+      "replay"
     ]
   },
   {
@@ -107,6 +138,10 @@
     "url": "https://arxiv.org/abs/2004.07211",
     "tags": [
       "Continual learning"
+    ],
+    "concepts": [
+      "replay",
+      "distillation"
     ]
   },
   {
@@ -117,6 +152,9 @@
     "url": "https://arxiv.org/abs/2306.13812",
     "tags": [
       "Plasticity"
+    ],
+    "concepts": [
+      "plasticity-loss"
     ]
   },
   {
@@ -127,6 +165,9 @@
     "url": "https://arxiv.org/abs/2602.09234",
     "tags": [
       "Plasticity"
+    ],
+    "concepts": [
+      "plasticity-loss"
     ]
   },
   {
@@ -137,6 +178,10 @@
     "url": "https://arxiv.org/abs/2606.24752",
     "tags": [
       "Plasticity"
+    ],
+    "concepts": [
+      "plasticity-loss",
+      "continual-pretraining"
     ]
   },
   {
@@ -147,6 +192,10 @@
     "url": "https://arxiv.org/abs/1909.01066",
     "tags": [
       "Knowledge"
+    ],
+    "concepts": [
+      "parametric-knowledge",
+      "knowledge-graphs"
     ]
   },
   {
@@ -157,6 +206,9 @@
     "url": "https://arxiv.org/abs/2012.14913",
     "tags": [
       "Knowledge"
+    ],
+    "concepts": [
+      "parametric-knowledge"
     ]
   },
   {
@@ -167,6 +219,10 @@
     "url": "https://arxiv.org/abs/2202.05262",
     "tags": [
       "Knowledge"
+    ],
+    "concepts": [
+      "knowledge-editing",
+      "parametric-knowledge"
     ]
   },
   {
@@ -177,6 +233,10 @@
     "url": "https://arxiv.org/abs/2309.14316",
     "tags": [
       "Knowledge"
+    ],
+    "concepts": [
+      "parametric-knowledge",
+      "knowledge-injection"
     ]
   },
   {
@@ -187,6 +247,9 @@
     "url": "https://arxiv.org/abs/2404.16789",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "continual-learning"
     ]
   },
   {
@@ -197,6 +260,10 @@
     "url": "https://arxiv.org/abs/2312.05934",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "knowledge-injection",
+      "rag"
     ]
   },
   {
@@ -207,6 +274,10 @@
     "url": "https://arxiv.org/abs/2403.08763",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "continual-pretraining",
+      "replay"
     ]
   },
   {
@@ -217,6 +288,10 @@
     "url": "https://arxiv.org/abs/2409.07431",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "continual-pretraining",
+      "knowledge-injection"
     ]
   },
   {
@@ -227,6 +302,9 @@
     "url": "https://arxiv.org/abs/2501.13453",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "catastrophic-forgetting"
     ]
   },
   {
@@ -237,6 +315,10 @@
     "url": "https://arxiv.org/abs/2508.01908",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "replay",
+      "continual-pretraining"
     ]
   },
   {
@@ -247,6 +329,10 @@
     "url": "https://arxiv.org/abs/2510.15103",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "parameter-isolation",
+      "catastrophic-forgetting"
     ]
   },
   {
@@ -257,6 +343,10 @@
     "url": "https://arxiv.org/abs/2601.19897",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "self-distillation",
+      "catastrophic-forgetting"
     ]
   },
   {
@@ -267,6 +357,10 @@
     "url": "https://arxiv.org/abs/2607.11020",
     "tags": [
       "Continual LLMs"
+    ],
+    "concepts": [
+      "knowledge-injection",
+      "catastrophic-forgetting"
     ]
   },
   {
@@ -277,6 +371,9 @@
     "url": "https://arxiv.org/abs/2005.11401",
     "tags": [
       "Memory"
+    ],
+    "concepts": [
+      "rag"
     ]
   },
   {
@@ -287,6 +384,9 @@
     "url": "https://arxiv.org/abs/2307.03172",
     "tags": [
       "Context"
+    ],
+    "concepts": [
+      "context-engineering"
     ]
   },
   {
@@ -297,6 +397,10 @@
     "url": "https://arxiv.org/abs/2404.16130",
     "tags": [
       "Knowledge graphs"
+    ],
+    "concepts": [
+      "knowledge-graphs",
+      "rag"
     ]
   },
   {
@@ -307,6 +411,11 @@
     "url": "https://arxiv.org/abs/2502.14802",
     "tags": [
       "Knowledge graphs"
+    ],
+    "concepts": [
+      "knowledge-graphs",
+      "rag",
+      "continual-learning"
     ]
   },
   {
@@ -317,6 +426,9 @@
     "url": "https://arxiv.org/abs/2310.08560",
     "tags": [
       "Context"
+    ],
+    "concepts": [
+      "agent-memory"
     ]
   },
   {
@@ -327,6 +439,10 @@
     "url": "https://arxiv.org/abs/2506.06266",
     "tags": [
       "Context"
+    ],
+    "concepts": [
+      "self-distillation",
+      "context-engineering"
     ]
   },
   {
@@ -337,6 +453,9 @@
     "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
     "tags": [
       "Context"
+    ],
+    "concepts": [
+      "context-engineering"
     ]
   },
   {
@@ -347,6 +466,10 @@
     "url": "https://arxiv.org/abs/2510.04618",
     "tags": [
       "Context"
+    ],
+    "concepts": [
+      "context-engineering",
+      "agent-memory"
     ]
   },
   {
@@ -357,6 +480,9 @@
     "url": "https://arxiv.org/abs/2407.04620",
     "tags": [
       "Memory"
+    ],
+    "concepts": [
+      "test-time-learning"
     ]
   },
   {
@@ -367,6 +493,10 @@
     "url": "https://arxiv.org/abs/2501.00663",
     "tags": [
       "Memory"
+    ],
+    "concepts": [
+      "test-time-learning",
+      "agent-memory"
     ]
   },
   {
@@ -377,6 +507,10 @@
     "url": "https://arxiv.org/abs/2512.24695",
     "tags": [
       "Memory"
+    ],
+    "concepts": [
+      "test-time-learning",
+      "continual-learning"
     ]
   },
   {
@@ -387,6 +521,71 @@
     "url": "https://arxiv.org/abs/2607.07847",
     "tags": [
       "Continual learning"
+    ],
+    "concepts": [
+      "continual-learning"
     ]
+  },
+  {
+    "order": 40,
+    "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+    "authors": "Ross, Gordon & Bagnell",
+    "year": 2011,
+    "url": "https://arxiv.org/abs/1011.0686",
+    "tags": [
+      "Continual LLMs"
+    ],
+    "concepts": [
+      "on-off-policy",
+      "sft"
+    ],
+    "why": "DAgger. Cited in O'Neill's continual learning talk as the classic fix for off-policy compounding errors."
+  },
+  {
+    "order": 41,
+    "title": "RL's Razor: Why Online Reinforcement Learning Forgets Less",
+    "authors": "Shenfeld, Pari & Agrawal",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2509.04259",
+    "tags": [
+      "Continual LLMs"
+    ],
+    "concepts": [
+      "rl",
+      "catastrophic-forgetting",
+      "on-off-policy"
+    ],
+    "why": "Explains why RL forgets less than SFT: forgetting tracks KL to the base model, and on-policy RL finds low-KL solutions."
+  },
+  {
+    "order": 42,
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "authors": "DeepSeek-AI",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2501.12948",
+    "tags": [
+      "Continual LLMs"
+    ],
+    "concepts": [
+      "rl",
+      "distillation",
+      "sft"
+    ],
+    "why": "The canonical cold-start SFT then RL recipe, plus SFT-only distillation into small Qwen and Llama students."
+  },
+  {
+    "order": 43,
+    "title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+    "authors": "Yue et al.",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2504.13837",
+    "tags": [
+      "Continual LLMs"
+    ],
+    "concepts": [
+      "rl",
+      "pass-at-k"
+    ],
+    "why": "Evidence that RL sharpens rather than expands: base models catch up at large k on pass@k."
   }
 ]

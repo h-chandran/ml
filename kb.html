@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knowledge Base | ML Notebook</title>
+    <meta
+      name="description"
+      content="Every paper, talk and note in Harish Chandran's ML notebook, linked by the concepts they cover."
+    />
+    <script>
+      // Set the theme before paint to avoid a flash.
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (!theme) {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        if (theme === "dark") document.documentElement.classList.add("dark");
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@400;700&family=Vend+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+      </svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+    </button>
+
+    <main>
+      <div class="grid-bg"></div>
+
+      <div class="container">
+        <header class="hero fade">
+          <h1>Knowledge Base</h1>
+          <p>
+            Every paper, talk and note in the <a href="./">ML Notebook</a>, linked by the concepts they cover.
+            Pick a concept on the graph or search for anything.
+          </p>
+          <nav class="jump" aria-label="Sections">
+            <a href="#graph">Graph</a>
+            <a href="#concepts">Concepts<span class="count" data-count="concepts"></span></a>
+            <a href="#sources">Sources<span class="count" data-count="sources"></span></a>
+            <a href="#notes">Notes<span class="count" data-count="notes"></span></a>
+          </nav>
+        </header>
+
+        <section id="graph" class="fade" style="animation-delay: 0.1s">
+          <div class="section-head">
+            <div>
+              <h2>Concept graph</h2>
+              <p class="section-sub">Large dots are concepts, small dots are papers, talks and resources. Drag to rearrange; click to open.</p>
+            </div>
+            <label class="toggle"><input type="checkbox" data-toggle="sources" checked /> Show sources</label>
+          </div>
+          <div class="graph-wrap">
+            <svg class="graph" data-graph role="img" aria-label="Graph of concepts and the sources that cover them"></svg>
+          </div>
+          <div class="legend" data-legend></div>
+        </section>
+
+        <section id="detail" class="detail fade" data-detail hidden></section>
+
+        <section id="concepts" class="fade" style="animation-delay: 0.2s">
+          <div class="section-head">
+            <div>
+              <h2>Concepts</h2>
+              <p class="section-sub">The ideas everything is filed under, grouped by area.</p>
+            </div>
+          </div>
+          <div class="concept-groups" data-concepts></div>
+        </section>
+
+        <section id="sources" class="fade" style="animation-delay: 0.3s">
+          <div class="section-head">
+            <div>
+              <h2>Everything I reference</h2>
+              <p class="section-sub">Papers read and to read, talks watched, and other resources.</p>
+            </div>
+          </div>
+          <div class="filters" data-filters="sources">
+            <input class="search" type="search" placeholder="Search titles, authors, takeaways, concepts" aria-label="Search everything" />
+          </div>
+          <ul class="rows" data-list="sources"></ul>
+        </section>
+
+        <section id="notes" class="fade" style="animation-delay: 0.4s">
+          <div class="section-head">
+            <div>
+              <h2>Notes</h2>
+              <p class="section-sub">Longer write-ups on topics, talks and papers.</p>
+            </div>
+          </div>
+          <ul class="rows" data-list="notes"></ul>
+        </section>
+
+        <footer>
+          <a class="btn cube" href="./" aria-label="Back to the ML Notebook">
+            <div class="bg-top"><div class="bg-inner"></div></div>
+            <div class="bg-right"><div class="bg-inner"></div></div>
+            <div class="bg"><div class="bg-inner"></div></div>
+            <div class="text">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Notebook
+            </div>
+          </a>
+        </footer>
+      </div>
+    </main>
+
+    <script src="assets/kb.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Knowledge Bases & Knowledge Graphs: an overview",
+    "kind": "Overview",
+    "year": 2026,
+    "url": "https://claude.ai/artifact/NXd9v4kxd3TWXNjBvenphY",
+    "tags": [
+      "Knowledge graphs"
+    ],
+    "concepts": [
+      "knowledge-graphs",
+      "parametric-knowledge",
+      "knowledge-editing",
+      "rag",
+      "continual-learning"
+    ],
+    "description": "My 25-section overview of KBs and KGs, from foundations to KGs + LLMs. §21 (LMs as knowledge bases) and §24 (continually updated KGs) bridge into continual learning. Private link."
+  }
+]
