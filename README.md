@@ -1,6 +1,6 @@
 # ml
 
-A single place for everything I'm doing in machine learning: papers I've read, papers I plan to read, talks I've watched, my notes, and what I'm working on right now. The site in this repo renders it all, and the [knowledge base](https://ml.harishchandran.com/kb.html) links everything by concept.
+A single place for everything I'm doing in machine learning: papers I've read, papers I plan to read, talks I've watched, my notes, what I'm working on right now, and ML discussions from building [Paretal](https://paretal.com) (continual learning for enterprise agents). The site in this repo renders it all, and the [knowledge base](https://ml.harishchandran.com/kb.html) links everything by concept.
 
 ## Layout
 
@@ -10,6 +10,7 @@ kb.html             knowledge base: concept graph + everything I reference, sear
 assets/             styles + scripts (app.js for the notebook, kb.js for the knowledge base)
 data/
   working-on.json   what I'm currently building / learning
+  paretal.json      ML discussions related to Paretal
   read.json         papers I've read
   to-read.json      papers I plan to read
   talks.json        talks and videos I've watched
@@ -28,17 +29,18 @@ Edit the JSON files in `data/`. Each is an array of objects; only `title` is req
 | File | Fields |
 | --- | --- |
 | `working-on.json` | `title`, `description`, `status`, `progress` (0–1), `started`, `tags`, `url` |
+| `paretal.json` | `title`, `date` (`YYYY-MM`), `status`, `summary`, `tags`, `url`, `notes` |
 | `read.json` | `title`, `authors`, `year`, `url`, `tags`, `read` (`YYYY-MM`), `takeaway`, `notes`, `code` |
 | `to-read.json` | `order`, `title`, `authors`, `year`, `url`, `tags`, `why` |
 | `talks.json` | `title`, `speaker`, `venue`, `year`, `date`, `url`, `watched` (`YYYY-MM`), `tags`, `takeaway`, `notes` |
 | `resources.json` | `title`, `kind`, `year`, `url`, `tags`, `description` |
 | `concepts.json` | `id`, `name`, `group`, `summary`, `related` (concept ids), `note` (topic note path) |
 
-Any entry in the first five files can also take `concepts`: a list of concept ids from `concepts.json`. That is what places it on the knowledge base graph and under each concept's page.
+Any entry in `working-on.json`, `read.json`, `to-read.json`, `talks.json`, or `resources.json` can also take `concepts`: a list of concept ids from `concepts.json`. That is what places it on the knowledge base graph and under each concept's page.
 
 When I finish a paper, I move it from `to-read.json` to `read.json` and add `read` and `takeaway`.
 
-To attach longer notes to a paper or talk, write the markdown file under `notes/` and set `"notes": "notes/..."` on the entry. Notes render on the knowledge base page (`kb.html#note=notes/...`), and relative links between notes work there. A topic hub note is linked from its concept with the `note` field.
+To attach longer notes to a paper, talk, or Paretal discussion, write the markdown file under `notes/` and set `"notes": "notes/..."` on the entry. Notes render on the knowledge base page (`kb.html#note=notes/...`), and relative links between notes work there. A topic hub note is linked from its concept with the `note` field.
 
 ## Knowledge base
 

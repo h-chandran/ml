@@ -49,7 +49,7 @@
   }
 
   function searchText(item) {
-    return [item.title, item.authors, item.speaker, item.venue, item.takeaway, item.why, item.description, (item.tags || []).join(" ")]
+    return [item.title, item.authors, item.speaker, item.venue, item.takeaway, item.why, item.summary, item.description, (item.tags || []).join(" ")]
       .join(" ")
       .toLowerCase();
   }
@@ -138,6 +138,25 @@
       .join("");
   }
 
+  function renderParetal(items) {
+    return items
+      .map(function (item) {
+        var links = [];
+        if (item.notes) links.push('<a href="' + esc(item.notes) + '">Full note</a>');
+        return (
+          '<li><div class="row"><span class="row-main">' +
+          '<span class="row-title">' + titleBlock(item) +
+          (item.status ? ' <span class="status">' + esc(item.status) + "</span>" : "") + "</span>" +
+          (item.summary ? '<span class="row-desc">' + esc(item.summary) + "</span>" : "") +
+          (links.length ? '<span class="row-links">' + links.join("") + "</span>" : "") +
+          "</span>" +
+          meta([formatMonth(item.date), (item.tags || [])[0]]) +
+          "</div></li>"
+        );
+      })
+      .join("");
+  }
+
   // ---------- filterable lists ----------
 
   function setupList(key, items, render) {
@@ -203,26 +222,31 @@
     if (el) el.textContent = "(" + n + ")";
   }
 
-  Promise.all([load("working-on"), load("read"), load("to-read"), load("talks")])
+  Promise.all([load("working-on"), load("paretal"), load("read"), load("to-read"), load("talks")])
     .then(function (data) {
       var working = data[0];
-      var read = data[1].slice().sort(function (a, b) {
+      var paretal = data[1].slice().sort(function (a, b) {
+        return String(b.date || "").localeCompare(String(a.date || ""));
+      });
+      var read = data[2].slice().sort(function (a, b) {
         return String(b.read || "").localeCompare(String(a.read || ""));
       });
-      var toRead = data[2].slice().sort(function (a, b) {
+      var toRead = data[3].slice().sort(function (a, b) {
         return (a.order || Infinity) - (b.order || Infinity);
       });
 
-      var talks = data[3].slice().sort(function (a, b) {
+      var talks = data[4].slice().sort(function (a, b) {
         return String(b.watched || "").localeCompare(String(a.watched || ""));
       });
 
       document.querySelector('[data-list="working-on"]').innerHTML = renderWorkingOn(working);
+      setupList("paretal", paretal, renderParetal);
       setupList("read", read, renderRead);
       setupList("talks", talks, renderTalks);
       setupList("to-read", toRead, renderToRead);
 
       setCount("working-on", working.length);
+      setCount("paretal", paretal.length);
       setCount("read", read.length);
       setCount("talks", talks.length);
       setCount("to-read", toRead.length);

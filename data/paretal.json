@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Where should an enterprise agent's learning live: weights, memory, or the prompt?",
+    "date": "2026-10",
+    "status": "Open question",
+    "summary": "Three places an agent can keep what it learns from a customer: fine-tuned weights, a retrieval store, or an ever-growing system prompt. Each has a different failure mode (forgetting, stale retrieval, context bloat) and a different cost to roll back. The question for Paretal is which one is the default and when the others earn their place.",
+    "tags": [
+      "Architecture",
+      "Knowledge injection"
+    ]
+  },
+  {
+    "title": "Does replay still make sense when the base model is an API?",
+    "date": "2026-10",
+    "status": "Open question",
+    "summary": "Most of the continual-learning literature assumes you own the weights and can interleave old examples with new ones. For agents built on hosted models, the only thing we control is the data around the model. What does an experience buffer look like when it has to live in retrieval and evaluation sets rather than in the gradient?",
+    "tags": [
+      "Catastrophic forgetting",
+      "Replay"
+    ]
+  },
+  {
+    "title": "Plasticity loss in a long-running agent",
+    "date": "2026-10",
+    "status": "Open question",
+    "summary": "A deployed agent sees the same customer's workflows for months. The plasticity papers suggest networks trained on a drifting stream slowly stop adapting. Whether this shows up in practice depends on how often we update and how much of the update is in the weights versus the memory layer. Worth a small experiment before assuming either way.",
+    "tags": [
+      "Plasticity",
+      "Drift"
+    ]
+  },
+  {
+    "title": "What is the training signal in an agent trace?",
+    "date": "2026-10",
+    "status": "Open question",
+    "summary": "An agent run produces tool calls, outcomes, retries, and sometimes a human correction. Most of that is noisy. The useful signal is probably the correction and the final outcome, not the intermediate steps. How to turn a week of traces into a clean set of examples without a labeling team is the practical problem.",
+    "tags": [
+      "Training signal",
+      "Agent traces"
+    ]
+  },
+  {
+    "title": "There is no benchmark for continual learning in enterprise agents",
+    "date": "2026-10",
+    "status": "Position",
+    "summary": "Academic continual-learning benchmarks are class-incremental or task-incremental on vision datasets. Enterprise agents face a different setting: a stream of partially overlapping tasks, no clear task boundaries, and the cost of a regression far higher than the value of a new skill. We will likely have to build our own evaluation before any method comparison means anything.",
+    "tags": [
+      "Evaluation",
+      "Benchmarks"
+    ]
+  }
+]
