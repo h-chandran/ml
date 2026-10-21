@@ -338,7 +338,7 @@
   {
     "order": 26,
     "title": "Self-Distillation Enables Continual Learning",
-    "authors": "Shenfeld et al.",
+    "authors": "Shenfeld, Damani, Hübotter & Agrawal",
     "year": 2026,
     "url": "https://arxiv.org/abs/2601.19897",
     "tags": [
@@ -346,8 +346,13 @@
     ],
     "concepts": [
       "self-distillation",
-      "catastrophic-forgetting"
-    ]
+      "on-off-policy",
+      "catastrophic-forgetting",
+      "knowledge-injection"
+    ],
+    "why": "SDFT: the model conditioned on a demonstration teaches its unconditioned self via on-policy reverse KL. Learns new skills and post-cutoff facts with far less forgetting than SFT, no reward needed.",
+    "notes": "notes/self-distillation-enables-continual-learning.md",
+    "code": "http://idanshenfeld.com/SDFT"
   },
   {
     "order": 27,
